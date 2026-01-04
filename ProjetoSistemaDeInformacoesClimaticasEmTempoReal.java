@@ -31,7 +31,7 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
     public static String getDadosClimaticos (String cidade) throws Exception { //desenvolvendo o método mencionado anteriomente
         String apiKey = Files.readString( Paths.get("api-key.txt")).trim(); /* colocando a api coletada. trim -> remove espaço errado */
         String formataNomeCidade = URLEncoder.encode(cidade, StandardCharsets.UTF_8);
-        String apiUrl = "https://weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + formataNomeCidade; //escrevendo a url, isso é uma string
+        String apiUrl = "https:/api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + formataNomeCidade; //escrevendo a url, isso é uma string
         HttpRequest request = HttpRequest.newBuilder() //classe java que vai sair do sistema e fazer a solicitação 
             .uri(URI.create(apiUrl)) //define o URI da solicitação http
             .build(); //finaliza a construção da solicitação HTTP
