@@ -73,5 +73,5 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
         System.out.println("Umidade: " + umidade + "%");
         System.out.println("Velocidade do Vento: " + velocidadeVento + " km/h");
         System.out.println("Pressão Atmosférica: " + pressaoAtmosferica + " mb");
-        }
+    }
 }
