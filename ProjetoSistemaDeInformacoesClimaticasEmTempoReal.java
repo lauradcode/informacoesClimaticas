@@ -12,6 +12,8 @@ import java.nio.file.Paths;
 public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);  // definindo o scanner para ler do teclado o local (System.in)
+        System.out.print("Digite o nome da cidade: ");  //mensagem para o usuário
+        String cidade = scanner.nextLine(); //lê a cidade do teclado escrita pelo us
 
     }    
 }
