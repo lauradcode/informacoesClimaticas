@@ -15,5 +15,20 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
         System.out.print("Digite o nome da cidade: ");  //mensagem para o usuário
         String cidade = scanner.nextLine(); //lê a cidade do teclado escrita pelo us
 
+        //bloco protegido (faz comunicações HTTP, cominicação com outros sites...)
+        try {
+            String dadosClimaticos = getDadosClimaticos(cidade); //ainda vai ser definido. retorna um JSON. código 1006 = localização ñ encontrada
+            if (dadosClimaticos.contains("\"code\":1006")) { //checagem. "code":1006 tem que estar entres aspas por ser uma string
+                System.out.println("Localização não econtrada. Tente novamente.");
+            } else {
+                imprimirDadosClimaticos(dadosClimaticos);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }    
+
+
+    
 }
