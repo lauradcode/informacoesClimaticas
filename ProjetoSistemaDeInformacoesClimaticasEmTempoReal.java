@@ -46,7 +46,7 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
 
         /*fazendo o método da impressão para não ficar confuso para o usuário. TODAS as Strings usadas são de acordo com a DOCUMENTAÇÃO DO WEATHER API*/
     public static void imprimirDadosClimaticos(String dados){
-        System.out.println("DEBUG: " + dados);
+        //System.out.println("DEBUG: " + dados);
         JSONObject dadosJson = new JSONObject(dados); //aqui esta od dados da localização
         JSONObject informacoesMeteorologicas = dadosJson.getJSONObject("current"); //significa que quero os dados em tempo real da weather, por isso 'current'
 
