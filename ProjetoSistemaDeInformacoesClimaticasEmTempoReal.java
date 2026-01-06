@@ -44,17 +44,17 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
         return response.body(); //retorna os dados obtidos 
     }
 
-        /*fazendo o método da impressão para não ficar confuso para o usuário. TODAS as Strings usadas são de acordo com a DOCUMENTAÇÃO DO WEATHER API*/
+    /*fazendo o método da impressão para não ficar confuso para o usuário. TODAS as Strings usadas são de acordo com a DOCUMENTAÇÃO DO WEATHER API*/
     public static void imprimirDadosClimaticos(String dados){
         //System.out.println("DEBUG: " + dados);
         JSONObject dadosJson = new JSONObject(dados); //aqui esta od dados da localização
         JSONObject informacoesMeteorologicas = dadosJson.getJSONObject("current"); //significa que quero os dados em tempo real da weather, por isso 'current'
 
-            //extrai os dados da localização
+        //extrai os dados da localização
         String cidade = dadosJson.getJSONObject("location").getString ("name");
         String pais = dadosJson.getJSONObject("location").getString ("country");
 
-            //extrai dados adicionais 
+        //extrai dados adicionais 
         String condicaoTempo = informacoesMeteorologicas.getJSONObject("condition").getString("text"); //condição e descrição
         int umidade = informacoesMeteorologicas.getInt("humidity");
         float velocidadeVento = informacoesMeteorologicas.getFloat("wind_kph");
@@ -62,10 +62,10 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
         float sensacaoTermica = informacoesMeteorologicas.getFloat("feelslike_c");
         float temperaturaAtual = informacoesMeteorologicas.getFloat("temp_c");
 
-            // Extrai a data e hora da string retornada pela API
+        // Extrai a data e hora da string retornada pela API
         String dataHoraString = informacoesMeteorologicas.getString("last_updated");
 
-            // Imprime as informações atuais
+        // Imprime as informações atuais
         System.out.println("Informações Meteorológicas para " + cidade + ", " + pais);
         System.out.println("Data e Hora: " + dataHoraString);
         System.out.println("Temperatura Atual: " + temperaturaAtual + "°C");
