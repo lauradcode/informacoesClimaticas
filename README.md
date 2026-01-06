@@ -1,6 +1,6 @@
 # Sistema de Informações Climáticas em Tempo Real
 
-Projeto em Java desenvolvido para consumo de API REST, com foco em boas práticas de programação, integração com serviços externos e manipulação de dados em formato JSON.
+Projeto em Java desenvolvido para consumo de API REST, com integração a serviço externo de dados climáticos, utilizando requisições HTTP e processamento de respostas em JSON, seguindo boas práticas de organização e legibilidade de código.
 
 O sistema consulta dados climáticos em tempo real a partir do nome de uma cidade, utilizando a WeatherAPI, e exibe informações organizadas no terminal.
 
