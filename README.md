@@ -54,6 +54,8 @@ Caso a biblioteca `org.json` esteja adicionada ao classpath do projeto:
 
 ```bash
 javac -cp ".;lib/json.jar" ProjetoSistemaDeInformacoesClimaticasEmTempoReal.java
+```
+```
 java -cp ".;lib/json.jar" ProjetoSistemaDeInformacoesClimaticasEmTempoReal
 ```
 
